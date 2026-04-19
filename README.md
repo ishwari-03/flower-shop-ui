@@ -1,8 +1,6 @@
-# 🌸 Blossom Haven - Professional Flower Shop
+# 🌸 Blossom Haven - Flower Shop
 
 Blossom Haven is a stunning, fully-functional multi-page e-commerce website for a premium flower shop. It combines modern aesthetics with a robust set of features, providing users with a seamless shopping experience from browsing to checkout.
-
-![Preview Image](images/bright-flowers-vase-table.jpg)
 
 ## ✨ Key Features
 
