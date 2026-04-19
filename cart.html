@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Flower Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="index.html" class="logo">flower<span>.</span></a>
+        <nav class="navbar">
+            <a href="index.html#home">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="products.html">PRODUCT</a>
+            <a href="index.html#review">REVIEW</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <a href="#" class="fas fa-heart" id="wishlist-btn"></a>
+            <a href="cart.html" class="fas fa-shopping-cart active" id="cart-btn">
+                <span id="cart-count">0</span>
+            </a>
+            <a href="#" class="fas fa-user" id="user-btn"></a>
+        </div>
+    </header>
+
+    <section class="cart-container" style="padding-top: 10rem;">
+        <h1 class="heading">Your <span>Shopping Cart</span></h1>
+        
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Items will be rendered by JS -->
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total-amount">0.00</span></h3>
+        </div>
+
+        <div class="cart-btns">
+            <a href="products.html" class="btn" style="background: #333;">Continue Shopping</a>
+            <a href="#" class="btn" id="checkout-btn">Checkout</a>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>about us</h3>
+                <p>Welcome to Blossom Haven, your premier destination for fresh, handpicked flowers. We are dedicated to bringing nature's beauty to your doorstep with love and care.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html#home">home</a>
+                <a href="index.html#about">about</a>
+                <a href="products.html">products</a>
+                <a href="index.html#review">review</a>
+                <a href="index.html#contact">contact</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> example@gmail.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> NYC, USA </a>
+                <img src="images/secure-payment_18229334.png" class="payment" alt="" style="height: 3rem; margin-top: 2rem;">
+            </div>
+            <div class="box newsletter-box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="your email" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+        <div class="credit"> created by <span> blossom haven </span> | all rights reserved </div>
+    </section>
+
+    <!-- login modal -->
+    <div class="login-form-container" id="login-modal" style="position: fixed; top: -110%; left: 0; height: 100%; width: 100%; z-index: 10000; background: rgba(0,0,0,.8); display: flex; align-items: center; justify-content: center; transition: .4s linear;">
+        <div id="close-login-btn" class="fas fa-times" style="position: absolute; top: 2rem; right: 3rem; font-size: 4rem; color: #fff; cursor: pointer;"></div>
+        <form action="" style="width: 40rem; background: #fff; border-radius: .5rem; padding: 2rem;">
+            <h3 style="font-size: 2.5rem; text-transform: uppercase; color: #333; text-align: center; padding-bottom: 1rem;">login</h3>
+            <span style="font-size: 1.5rem;">email</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="" style="width: 100%; margin: .7rem 0; font-size: 1.6rem; border: .1rem solid rgba(0,0,0,.1); border-radius: .5rem; padding: 1rem; text-transform: none;">
+            <span style="font-size: 1.5rem;">password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="" style="width: 100%; margin: .7rem 0; font-size: 1.6rem; border: .1rem solid rgba(0,0,0,.1); border-radius: .5rem; padding: 1rem; text-transform: none;">
+            <div class="checkbox" style="display: flex; align-items: center; gap: .5rem; padding: .5rem 0;">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me" style="font-size: 1.5rem; color: #666;">remember me</label>
+            </div>
+            <input type="submit" value="login now" class="btn" style="width: 100%; margin: .7rem 0;">
+            <p style="padding-top: .8rem; font-size: 1.5rem; color: #666;">forget password? <a href="#" style="color: #c60763;">click here</a></p>
+            <p style="padding-top: .8rem; font-size: 1.5rem; color: #666;">don't have an account? <a href="#" style="color: #c60763;">create one</a></p>
+        </form>
+    </div>
+
+    <!-- chat widget -->
+    <div id="chat-btn" class="fas fa-comment" style="position: fixed; bottom: 2rem; right: 2rem; height: 6rem; width: 6rem; line-height: 6rem; border-radius: 50%; background: #c60763; color: #fff; font-size: 3rem; text-align: center; cursor: pointer; z-index: 1000; box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);"></div>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('checkout-btn').onclick = (e) => {
+            e.preventDefault();
+            alert('Thank you for your order! This is a demo checkout.');
+            localStorage.removeItem('flower_cart');
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
