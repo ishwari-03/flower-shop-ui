@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - Flower Shop</title>
+    <title>Your Wishlist - Blossom Haven</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,40 +25,25 @@
         </form>
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <a href="wishlist.html" class="fas fa-heart" id="wishlist-btn"></a>
-            <a href="cart.html" class="fas fa-shopping-cart active" id="cart-btn">
+            <a href="wishlist.html" class="fas fa-heart active" id="wishlist-btn"></a>
+            <a href="cart.html" class="fas fa-shopping-cart" id="cart-btn">
                 <span id="cart-count">0</span>
             </a>
             <a href="#" class="fas fa-user" id="user-btn"></a>
         </div>
     </header>
 
-    <section class="cart-container" style="padding-top: 10rem;">
-        <h1 class="heading">Your <span>Shopping Cart</span></h1>
+    <section class="wishlist-container" style="padding-top: 10rem; min-height: 80vh;">
+        <h1 class="heading">My <span>Wishlist</span></h1>
         
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Items will be rendered by JS -->
-            </tbody>
-        </table>
-
-        <div class="cart-total">
-            <h3>Total: $<span id="cart-total-amount">0.00</span></h3>
-        </div>
-
-        <div class="cart-btns">
-            <a href="products.html" class="btn" style="background: #333;">Continue Shopping</a>
-            <a href="#" class="btn" id="checkout-btn">Checkout</a>
+        <div class="products">
+            <div class="box-container" id="wishlist-items-container">
+                <!-- Wishlist items will be rendered here -->
+                <div class="empty-msg" style="text-align: center; font-size: 2rem; width: 100%; padding: 5rem 0;">
+                    Your wishlist is empty! <br>
+                    <a href="products.html" class="btn" style="margin-top: 2rem;">Discover Flowers</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -117,20 +102,8 @@
             <input type="submit" value="login now" class="btn" style="width: 100%; margin: .7rem 0;">
             <p style="padding-top: .8rem; font-size: 1.5rem; color: #666;">don't have an account? <a href="#" id="toggle-signup" style="color: #c60763;">create one</a></p>
         </form>
-    </div>
-
-    <!-- chat widget -->
-    <div id="chat-btn" class="fas fa-comment" style="position: fixed; bottom: 2rem; right: 2rem; height: 6rem; width: 6rem; line-height: 6rem; border-radius: 50%; background: #c60763; color: #fff; font-size: 3rem; text-align: center; cursor: pointer; z-index: 1000; box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);"></div>
-
+    </header>
 
     <script src="script.js"></script>
-    <script>
-        document.getElementById('checkout-btn').onclick = (e) => {
-            e.preventDefault();
-            alert('Thank you for your order! This is a demo checkout.');
-            localStorage.removeItem('flower_cart');
-            window.location.href = 'index.html';
-        };
-    </script>
 </body>
 </html>
